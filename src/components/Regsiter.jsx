@@ -4,6 +4,7 @@ import { useState } from "react";
 import "../assets/styles/Login.css";
 import { useNavigate } from "react-router-dom";
 import APIser from "../routes/Apiservice";
+import logo from "../assets/images/logo1.png";
 
 export default function Register() {
   const [error, setError] = useState("");
@@ -112,10 +113,9 @@ export default function Register() {
                   <div className="logo_login">
                     <div className="center" style={{margin:"1.4rem"}}>
                       <img
-                        alt="logo"
-                        src="src/assets/images/logo1.png"
-                        style={{ maxWidth: "200px", maxHeight: "50px" }}
-                      />
+                                               src={logo} alt="logo" 
+                                       style={{ maxWidth: "200px", maxHeight: "50px" }}
+                     />
                     </div>
 
                     <div className="login-heading">
