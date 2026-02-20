@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../assets/styles/interviewResult.css";
+import "../assets/styles/InterviewResult.css";
 import { useNavigate } from "react-router-dom";
 import APIser from "../routes/Apiservice";
 import logo from "../assets/images/logo1.png";
