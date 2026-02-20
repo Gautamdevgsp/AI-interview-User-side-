@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../assets/styles/Login.css";
-
+import logo from "../assets/images/logo1.png";
 import { useNavigate } from "react-router-dom";
 import APIser from "../routes/Apiservice";
 
@@ -79,8 +79,7 @@ export default function Login() {
                 <div className="logo_login d-flex flex-column align-items-center text-center">
                   <div className="center" style={{margin:"1.4rem"}}>
                     <img
-                      alt="logo"
-                     src="src/assets/images/logo1.png"
+                         src={logo} alt="logo" 
                         style={{ maxWidth: "200px", maxHeight: "50px" }}
                     />
                   </div>
