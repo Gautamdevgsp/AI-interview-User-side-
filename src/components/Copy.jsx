@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/styles/interview.css";
+import "../assets/styles/Interview.css";
 
 function Copy() {
   return (
