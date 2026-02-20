@@ -1,0 +1,117 @@
+.interview-wrapper {
+  max-width: 1200px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.interview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+/* 
+.interview-card {
+     background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px
+    ),
+    #ffffff;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.interview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+} */
+
+.interview-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 30px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Grid layer */
+.interview-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px
+    );
+  background-size: 24px 24px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Keep content above grid */
+.interview-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover lift */
+.interview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.interview-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.interview-card p {
+  color: #4b5563;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.start-btn {
+  margin-top: 25px;
+  background: transparent;
+  border: none;
+  color: #111827;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.start-btn:hover {
+  text-decoration: underline;
+}

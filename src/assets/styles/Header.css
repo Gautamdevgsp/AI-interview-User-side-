@@ -1,0 +1,137 @@
+/* HEADER */
+.app-header {
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  cursor: pointer;
+}
+
+.header-logo {
+  height: 40px;
+}
+
+/* RIGHT */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* HOME BUTTON */
+.header-secondary-btn {
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+/* PROFILE */
+.profile-wrapper {
+  position: relative;
+}
+
+.header-secondary-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.header-secondary-btn:hover {
+  scale: 1.05;
+}
+
+.active-link {
+  background-color: #005bab;
+  color: white !important;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.profile-section:hover {
+  background: #f3f6fb;
+}
+
+.profile-avatar {
+  width: 20px;
+  height: 20px;
+  background: #005bab;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.profile-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* DROPDOWN */
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 160px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  animation: fadeIn 0.2s ease-in-out;
+  z-index: 200;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.dropdown-item.logout {
+  color: #ff4d4f;
+}
+
+.dropdown-item.logout:hover {
+  background: #fff1f0;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

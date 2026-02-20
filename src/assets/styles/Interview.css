@@ -1,0 +1,237 @@
+/* Container */
+.interview-container {
+  display: flex;
+  flex-direction: column;
+   width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #0f172a;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #313131;
+  padding: 12px 16px;
+  font-weight: bold;
+  color: #00ff00;
+}
+
+.top-left {
+  color: #00ff00;
+  font-size: larger;
+  letter-spacing: 0.2rem;
+}
+
+.top-right {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap; /* allows stacking */
+  overflow: hidden;
+  gap: 0;
+}
+
+/* Left Panel (Questions/MCQs) */
+.left-panel {
+  flex: 1 1 25%; /* grow, shrink, base 25% */
+  min-width: 250px; /* ensures it doesn’t get too small */
+ 
+  color: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Video Panel */
+.video-panel {
+  flex: 1 1 50%; /* grow, shrink, base 50% */
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.video-box {
+  position: relative;
+  background-color: #222;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.video-box .badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  background-color: #28a745;
+}
+
+.video-box.candidate .badge {
+  background-color: #007bff;
+}
+
+.video-placeholder {
+  padding: 40px 0;
+}
+
+/* Right Panel (Empty / Optional) */
+.right-panel {
+  flex: 1 1 25%;
+  min-width: 200px;
+  background-color: #111;
+  box-sizing: border-box;
+}
+
+/* Bottom Controls */
+.bottom-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  background-color: #000;
+  padding: 8px;
+}
+
+.bottom-controls button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.bottom-controls .leave-btn {
+  background-color: #dc3545;
+}
+
+/* MCQ options */
+.mcq-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.mcq-option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #222;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.mcq-option:hover {
+  background-color: #333;
+}
+
+.mcq-option input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #28a745;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 16px 0;
+}
+
+/* Small text */
+.small-text {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Responsive Media Queries */
+
+/* Medium desktops / tablets */
+@media (max-width: 1200px) {
+  .left-panel {
+    flex: 1 1 30%;
+  }
+  .video-panel {
+    flex: 1 1 50%;
+  }
+  .right-panel {
+    flex: 1 1 20%;
+  }
+}
+
+/* Tablets / smaller desktops */
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .left-panel,
+  .video-panel,
+  .right-panel {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+  .mcq-option {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .top-right {
+    font-size: 0.85rem;
+  }
+  .video-placeholder {
+    padding: 30px 0;
+  }
+  .bottom-controls {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .video-placeholder {
+    padding: 20px 0;
+    font-size: 0.9rem;
+  }
+  .bottom-controls button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  .mcq-option {
+    font-size: 0.9rem;
+  }
+}

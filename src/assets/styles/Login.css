@@ -1,0 +1,294 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* PAGE */
+.inner_page.login {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.full_container {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  height: 100%;
+}
+
+/* CENTERING */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verticle_center {
+  height: 100%;
+}
+
+.full_height {
+  height: 100%;
+}
+
+/* LOGIN CARD */
+.login_section1 {
+  width: 500px;
+  /* height: 86vh; */
+  background: #fff;
+  padding: 0px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.login_section {
+  width: 500px;
+  /* height: 80vh; */
+  background: #fff;
+  padding: 0px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+/* LOGO */
+.logo_login {
+  width: 100%;
+}
+.login-heading {
+  font-weight: 600;
+  margin-top: 1px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.login-heading p {
+  margin-top: 0.6rem;
+  font-weight: 100;
+  color: #c1c1c2;
+}
+.logo_login img {
+  width: 100%;
+  height: 10rem;
+  display: block;
+  border-radius: 6px 6px 0px 0px;
+}
+
+/* FORM */
+.login_form {
+  padding: 40px;
+}
+.login_form fieldset {
+  border: none;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.label_field {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: rgb(92, 92, 92);
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #005bab;
+}
+
+input::placeholder {
+  color: rgb(144, 123, 165);
+}
+
+/* CHECKBOX + LINK */
+.form-check-label {
+  font-size: 14px;
+  color: #444;
+}
+
+.form-check-input {
+  margin-right: 6px;
+}
+
+.forgot {
+  float: right;
+  font-size: 13px;
+  text-decoration: none;
+  color: #003360;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON */
+.margin_0 {
+  margin-bottom: 0;
+}
+
+.main_bt {
+  width: 100%;
+  padding: 10px;
+  background: #005bab;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main_bt:hover {
+  background: #486d94;
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  color: grey;
+}
+.bottom p {
+  color: #424242;
+  font-size: medium;
+}
+.register {
+  font-size: 1rem;
+  text-decoration: none;
+}
+.error-modal {
+  position: fixed;
+ 
+    top: 20px;
+  right: 20px;
+
+
+  background-color: #ff4d4f;
+  color: white;
+
+  padding: 12px 20px;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  z-index: 9999; /* VERY IMPORTANT */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+ animation: slideInRight 0.3s ease;
+}
+.login-modal {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #24ac03;
+  color: white;
+  margin-bottom: 2.5rem;
+  padding: 12px 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 17px;
+  font-weight: 500;
+  z-index: 9999; /* VERY IMPORTANT */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+ animation: slideInRight 0.3s ease;
+}
+.error-modal button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-modal button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 20px auto;
+  color: #999;
+  font-size: 14px;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.or-divider span {
+  padding: 0 12px;
+  white-space: nowrap;
+}
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye-icon svg {
+  transition: stroke 0.2s ease;
+}
+
+.eye-icon:hover svg {
+  stroke: #000;
+}
